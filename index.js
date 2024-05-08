@@ -40,7 +40,7 @@ const questions = [
         message: 'Please enter the usage information.', 
     },
     {
-        type: 'checkbox',
+        type: 'list',
         name: 'license',
         message: 'Select a license for your project:', 
         choices: ['Apache License 2.0', 'GNU', 'MIT', 'BSD 2-clause', 'BSD 3-clause', 
@@ -64,7 +64,11 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
+function writeToFile(fileName, data) {
+    fs.writeFile(fileName, JSON.stringify(data, (err) => 
+        err ? console.error(err) : console.log("Success!"))
+    );
+}
 
 // TODO: Create a function to initialize app
 function init() {}
