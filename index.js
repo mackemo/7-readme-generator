@@ -12,7 +12,22 @@ const questions = [
     {
         type: 'input',
         name: 'description',
-        message: 'Please write a description for your project.', 
+        message: 'Please enter a description of your project.', 
+    },
+    {
+        type: 'input',
+        name: 'screenshot',
+        message: 'Provide the relative path for the screenshot of the app.', 
+    },
+    {
+        type: 'input',
+        name: 'process',
+        message: 'What was the process to creating your application?', 
+    },
+    {
+        type: 'input',
+        name: 'links',
+        message: 'Provide the links to your webpage and your github repository.', 
     },
     {
         type: 'input',
@@ -25,6 +40,13 @@ const questions = [
         message: 'Please enter the usage information.', 
     },
     {
+        type: 'checkbox',
+        name: 'license',
+        message: 'Select a license for your project:', 
+        choices: ['Apache License 2.0', 'GNU', 'MIT', 'BSD 2-clause', 'BSD 3-clause', 
+        'Boost', 'Creative Commons', 'Eclipse', 'GNU v3', 'GNU v2', 'Mozilla', 'The Unlicense'],
+    },
+    {
         type: 'input',
         name: 'contribution',
         message: 'How can others contribute?', 
@@ -33,6 +55,11 @@ const questions = [
         type: 'input',
         name: 'test',
         message: 'Please enter how to test your project.', 
+    },
+    {
+        type: 'input',
+        name: 'acknowlegement',
+        message: 'Please enter the resources used to make the project.', 
     }
 ];
 
