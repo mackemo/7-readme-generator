@@ -1,9 +1,15 @@
 // TODO: Include packages needed for this application
 const fs = require('fs');
+const markDown = require('./utils/generateMarkdown');
 const inquirer = require('inquirer');
 
 // TODO: Create an array of questions for user input
 const questions = [
+    {
+        type: 'input',
+        name: 'fileName',
+        message: 'What is the name of your file?',
+    },
     {
         type: 'input',
         name: 'title',
@@ -65,13 +71,23 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, JSON.stringify(data, (err) => 
-        err ? console.error(err) : console.log("Success!"))
+    fs.writeFile(fileName, markDown(data), (err) => 
+        err ? console.error(err) : console.log("Success!")
     );
 }
 
 // TODO: Create a function to initialize app
-function init() {}
+function init() {
+    inquirer
+        .prompt(questions)
+        .then((data) => {
+            writeToFile(data.fileName, data);
+        })
+
+        .catch(function (error) {
+            console.error("Error occurred:", error);
+        });
+}
 
 // Function call to initialize app
 init();
