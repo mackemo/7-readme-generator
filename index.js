@@ -7,6 +7,11 @@ const inquirer = require('inquirer');
 const questions = [
     {
         type: 'input',
+        name: 'fileName',
+        message: 'What is the name of your file?',
+    },
+    {
+        type: 'input',
         name: 'title',
         message: 'What is the title of your project?',
     }, 
@@ -66,13 +71,22 @@ const questions = [
 
 // TODO: Create a function to write README file
 function writeToFile(fileName, data) {
-    fs.writeFile(fileName, JSON.stringify(data, (err) => 
-        err ? console.error(err) : console.log("Success!"))
+    fs.writeFile(fileName, markDown(data), (err) => 
+        err ? console.error(err) : console.log("Success!")
     );
 }
 
 // TODO: Create a function to initialize app
 function init() {
+    inquirer
+        .prompt(questions)
+        .then((data) => {
+            writeToFile(data.fileName, data);
+        })
+
+        .catch(function (error) {
+            console.error("Error occurred:", error);
+        });
 }
 
 // Function call to initialize app
