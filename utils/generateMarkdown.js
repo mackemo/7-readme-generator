@@ -80,12 +80,95 @@ function renderLicenseBadge(license) {
     default:
       licenseBadge = "";
   }
+
+  return licenseBadge;
 }
 
-return licenseBadge;
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  let licenseLink;
+
+  switch(license) {
+
+    case 'Apache License 2.0':
+      licenseLink =
+      '(https://opensource.org/licenses/Apache-2.0)';
+      break;
+
+
+    case 'GNU':
+      licenseLink =
+      '(https://www.gnu.org/licenses/gpl-3.0)';
+      break;
+
+
+    case 'MIT':
+      licenseLink =
+      '(https://opensource.org/licenses/MIT)';
+      break;
+
+
+    case 'BSD 2-clause':
+      licenseLink =
+      '(https://opensource.org/licenses/BSD-2-Clause)';
+      break;
+
+
+    case 'BSD 3-clause':
+      licenseLink =
+      '(https://opensource.org/licenses/BSD-3-Clause)';
+      break;
+
+
+    case 'Boost':
+      licenseLink = 
+      '(https://www.boost.org/LICENSE_1_0.txt)';
+      break;
+
+
+    case 'Creative Commons':
+      licenseLink =
+      '(http://creativecommons.org/publicdomain/zero/1.0/)';
+      break;
+
+
+    case 'Eclipse':
+      licenseLink =
+      '(https://opensource.org/licenses/EPL-1.0)';
+      break;
+
+
+    case 'GNU v3':
+      licenseLink =
+      '(https://www.gnu.org/licenses/agpl-3.0)';
+      break;
+
+
+    case 'GNU v2':
+      licenseLink = 
+      '(https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html)';
+      break;
+
+
+    case 'Mozilla':
+      licenseLink =
+      '(https://opensource.org/licenses/MPL-2.0)';
+      break;
+
+
+    case 'The Unlicense':
+      licenseLink = 
+      '(http://unlicense.org/)';
+      break;
+
+
+    default:
+      licenseLink = "";
+  }
+
+  return licenseLink;
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
