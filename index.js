@@ -80,8 +80,9 @@ const questions = [
 ];
 
 // TODO: Create a function to write README file
-function writeToFile(fileName, data) {
-    fs.writeFile(fileName, markDown(data), (err) => 
+function writeToFile(data) {
+    const filename = `${data.fileName}.md`;
+    fs.writeFile(filename, markDown(data), (err) => 
         err ? console.error(err) : console.log("Success!")
     );
 }
@@ -91,7 +92,7 @@ function init() {
     inquirer
         .prompt(questions)
         .then((data) => {
-            writeToFile(data.fileName, data);
+            writeToFile(data);
         })
 
         .catch(function (error) {
