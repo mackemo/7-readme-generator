@@ -23,7 +23,7 @@ const questions = [
     {
         type: 'input',
         name: 'screenshot',
-        message: 'Provide the relative path for the screenshot of the app.', 
+        message: 'Provide the relative path for the screenshot of the app ex: (![alt text](assets/images/screenshot.png)).', 
     },
     {
         type: 'input',
@@ -64,8 +64,18 @@ const questions = [
     },
     {
         type: 'input',
-        name: 'acknowlegement',
+        name: 'acknowledgement',
         message: 'Please enter the resources used to make the project.', 
+    },
+    {
+        type: 'input',
+        name: 'github',
+        message: 'Please enter your github username.', 
+    },
+    {
+        type: 'input',
+        name: 'email',
+        message: 'Please enter your email.', 
     }
 ];
 
