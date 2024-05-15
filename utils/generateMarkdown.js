@@ -11,69 +11,69 @@ function renderLicenseBadge(license) {
       break;
 
 
-    case 'GNU':
+    case 'GNU General v3':
       licenseBadge = 
-      '[![License: GPL v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]';
+      '[![GNU General v3](https://img.shields.io/badge/License-GPLv3-blue.svg)]';
       break;
 
 
     case 'MIT':
       licenseBadge = 
-      '[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]';
+      '[![MIT](https://img.shields.io/badge/License-MIT-yellow.svg)]';
       break;
 
 
     case 'BSD 2-clause':
       licenseBadge = 
-      '[![License](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)]';
+      '[![BSD 2-clause](https://img.shields.io/badge/License-BSD_2--Clause-orange.svg)]';
       break;
 
 
     case 'BSD 3-clause':
       licenseBadge = 
-      '[![License](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]';
+      '[![BSD 3-clause](https://img.shields.io/badge/License-BSD_3--Clause-blue.svg)]';
       break;
 
 
     case 'Boost':
       licenseBadge = 
-      '[![License](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]';
+      '[![Boost](https://img.shields.io/badge/License-Boost_1.0-lightblue.svg)]';
       break;
 
 
     case 'Creative Commons':
       licenseBadge = 
-      '[![License: CC0-1.0](https://licensebuttons.net/l/zero/1.0/80x15.png)]';
+      '[![Creative Commons](https://licensebuttons.net/l/zero/1.0/80x15.png)]';
       break;
 
 
     case 'Eclipse':
       licenseBadge = 
-      '[![License](https://img.shields.io/badge/License-EPL_1.0-red.svg)]';
+      '[![Eclipse](https://img.shields.io/badge/License-EPL_1.0-red.svg)]';
       break;
 
 
-    case 'GNU v3':
+    case 'GNU Affero v3':
       licenseBadge = 
-      '[![License: AGPL v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)]';
+      '[![GNU Affero v3](https://img.shields.io/badge/License-AGPL_v3-blue.svg)]';
       break;
 
 
-    case 'GNU v2':
+    case 'GNU General v2':
       licenseBadge = 
-      '[![License: GPL v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)]';
+      '[![GNU General v2](https://img.shields.io/badge/License-GPL_v2-blue.svg)]';
       break;
 
 
     case 'Mozilla':
       licenseBadge = 
-      '[![License: MPL 2.0](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]';
+      '[![Mozilla](https://img.shields.io/badge/License-MPL_2.0-brightgreen.svg)]';
       break;
 
 
     case 'The Unlicense':
       licenseBadge = 
-      '[![License: Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)]';
+      '[![The Unlicense](https://img.shields.io/badge/license-Unlicense-blue.svg)]';
       break;
 
 
@@ -99,7 +99,7 @@ function renderLicenseLink(license) {
       break;
 
 
-    case 'GNU':
+    case 'GNU General v3':
       licenseLink =
       'https://www.gnu.org/licenses/gpl-3.0';
       break;
@@ -141,13 +141,13 @@ function renderLicenseLink(license) {
       break;
 
 
-    case 'GNU v3':
+    case 'GNU Affero v3':
       licenseLink =
       'https://www.gnu.org/licenses/agpl-3.0';
       break;
 
 
-    case 'GNU v2':
+    case 'GNU General v2':
       licenseLink = 
       'https://www.gnu.org/licenses/old-licenses/gpl-2.0.en.html';
       break;
