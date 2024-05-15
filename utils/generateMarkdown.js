@@ -206,7 +206,6 @@ function generateMarkdown(data) {
   -[Questions](#Questions)
   
 
-  ## 
   ${data.screenshot}
 
 
